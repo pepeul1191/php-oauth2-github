@@ -14,9 +14,12 @@ Crear OAuth en Github:
 
 Una vez creada la aplicación OAuth, se puede cambiar la imagen.
 
+Los pasos que debe de seguir OAuth está en la fuente 2.
+
 ---
 
 Fuentes:
 
 + https://www.youtube.com/watch?v=2-5j7rvQgBo
 + https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/
++ https://voragine.net/weblogs/como-hacer-una-peticion-post-a-un-servidor-usando-curl-en-un-script-php
