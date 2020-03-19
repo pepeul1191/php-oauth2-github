@@ -16,6 +16,10 @@ Una vez creada la aplicación OAuth, se puede cambiar la imagen.
 
 Los pasos que debe de seguir OAuth está en la fuente 2.
 
+Para obtener los datos de usuario:
+
+    $ curl -H "Authorization: token TOKEN_ACCESS" https://api.github.com/user
+
 ---
 
 Fuentes:
