@@ -20,10 +20,16 @@ Para obtener los datos de usuario:
 
     $ curl -H "Authorization: token TOKEN_ACCESS" https://api.github.com/user
 
+Ver cookies en chrome 'chrome://settings/siteData'.
+
+Como funciona la lógica del logout está en la fuente 5.
+
 ---
 
 Fuentes:
 
 + https://www.youtube.com/watch?v=2-5j7rvQgBo
 + https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/
++ https://developer.github.com/v3/oauth_authorizations/
 + https://voragine.net/weblogs/como-hacer-una-peticion-post-a-un-servidor-usando-curl-en-un-script-php
++ https://stackoverflow.com/questions/12909332/how-to-logout-of-an-application-where-i-used-oauth2-to-login-with-google
