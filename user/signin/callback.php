@@ -39,7 +39,12 @@
       curl_close($curl_user);
       session_start();
       $_SESSION['user_data'] = $user_data;
+      $_SESSION['user_nick'] = $user_data->login;
+      $_SESSION['user_name'] = $user_data->name;
+      $_SESSION['user_img'] = $user_data->avatar_url;
+      $_SESSION['user_email'] = $user_data->email;
       $_SESSION['access_token'] = $data->access_token;
+      $_SESSION['app'] = 'Github';
       header('Location: http://localhost:8080/');
       exit();
     }
@@ -80,6 +85,11 @@
       session_start();
       $_SESSION['user_data'] = $user_data;
       $_SESSION['access_token'] = $data->access_token;
+      $_SESSION['user_nick'] = $user_data->name;
+      $_SESSION['user_name'] = $user_data->name;
+      $_SESSION['user_img'] = $user_data->picture;
+      $_SESSION['user_email'] = $user_data->email;
+      $_SESSION['app'] = 'Google';
       header('Location: http://localhost:8080/');
       exit();
     }
