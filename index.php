@@ -16,7 +16,6 @@
         echo '<p><b>Nombre</b>: ' . $_SESSION['user_data']->name . '</p>';
         echo '<img src="' . $_SESSION['user_data']->avatar_url . '" height= "200" width="200">';
         $output = '<p>
-          <button onclick="exit()"> salir???</button>
           <a href="%s" onclick="exitxd()">Salir</a>
         </p>';
         // var_dump($_SESSION['user_data']);
@@ -24,24 +23,33 @@
         $href = 'http://localhost:8080/user/signin/exit.php';
         echo sprintf($output, $href);
       }else{
+        // github
         $output = '<p>
           <a href="%s" >Sign In with Github</a>
         </p>';
         $href = 'https://github.com/login/oauth/authorize?client_id=fbf7599fc982965c892a';
         echo sprintf($output, $href);
+        // google
+        $output = '<p>
+          <a href="%s" >Sign In with GMail</a>
+        </p>';
+        $href = 'https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=1044701093820-jam7g5carn4nghkkhqr75ustq0l5vrum.apps.googleusercontent.com&redirect_uri=http://localhost:8080/user/signin/callback.php?origin=google&scope=profile email';
+        echo sprintf($output, $href);
+        // facebook
+        $output = '<p>
+          <a href="%s" >Sign In with Facebook</a>
+        </p>';
+        $href = 'https://github.com/login/oauth/authorize?client_id=fbf7599fc982965c892a';
+        echo sprintf($output, $href);
+        // instagram
+        $output = '<p>
+          <a href="%s" >Sign In with Instagram</a>
+        </p>';
+        $href = 'https://github.com/login/oauth/authorize?client_id=fbf7599fc982965c892a';
+        echo sprintf($output, $href);
       }
     ?>
-    <script>
-      function exit(){
-        var cookies = document.cookie.split(";");
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i];
-            var eqPos = cookie.indexOf("=");
-            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-            console.log(name);
-            // document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-        }
-      }
+    <script type="text/javascript">
     </script>
   </body>
 </html>
