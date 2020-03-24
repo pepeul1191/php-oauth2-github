@@ -4,6 +4,7 @@
 <html>
   <head>
     <title>Inicio</title>
+    <link rel="shortcut icon" href="/public/favicon.ico">
   </head>
   <body>
     <?php
