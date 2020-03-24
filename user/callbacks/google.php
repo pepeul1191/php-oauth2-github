@@ -39,6 +39,7 @@ if($data->access_token != ''){
   $_SESSION['user_img'] = $user_data->picture;
   $_SESSION['user_email'] = $user_data->email;
   $_SESSION['app'] = 'Google';
+  $_SESSION['logout_url'] = 'https://accounts.google.com/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost:8080/user/signin/exit.php';
   header('Location: http://localhost:8080/');
   exit();
 }

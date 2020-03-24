@@ -22,7 +22,7 @@
         </p>';
         // var_dump($_SESSION['user_data']);
         // var_dump($_COOKIE);
-        $href = 'http://localhost:8080/user/signin/exit.php';
+        $href = $_SESSION['logout_url'];
         echo sprintf($output, $href);
       }else{
         // github

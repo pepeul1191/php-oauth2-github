@@ -42,6 +42,7 @@ if($response['access_token'] != ''){
   $_SESSION['user_email'] = $user_data->email;
   $_SESSION['access_token'] = $data->access_token;
   $_SESSION['app'] = 'Github';
+  $_SESSION['logout_url'] = 'http://localhost:8080/user/signin/exit.php';
   header('Location: http://localhost:8080/');
   exit();
 }

@@ -48,3 +48,4 @@ Fuentes:
 + https://stackoverflow.com/questions/12909332/how-to-logout-of-an-application-where-i-used-oauth2-to-login-with-google
 + https://developers.google.com/identity/protocols/oauth2/web-server
 + https://stackoverflow.com/questions/48632883/enable-google-api-for-googleapis-com-auth-userinfo
++ https://github.com/jupyterhub/jupyterhub/issues/967
