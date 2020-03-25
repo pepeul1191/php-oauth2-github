@@ -49,3 +49,8 @@ Fuentes:
 + https://developers.google.com/identity/protocols/oauth2/web-server
 + https://stackoverflow.com/questions/48632883/enable-google-api-for-googleapis-com-auth-userinfo
 + https://github.com/jupyterhub/jupyterhub/issues/967
++ https://developers.facebook.com/docs/facebook-login/access-tokens/?locale=es_LA
++ https://developers.facebook.com/docs/facebook-login/access-tokens/
++ https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow/v2.3
++ https://developers.facebook.com/apps/{appid}/settings/basic/
++ https://digitalleaves.com/social-login-for-your-rest-api-using-oauth-2-i/

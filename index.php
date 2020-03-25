@@ -41,7 +41,7 @@
         $output = '<p>
           <a href="%s" >Sign In with Facebook</a>
         </p>';
-        $href = 'https://github.com/login/oauth/authorize?client_id=fbf7599fc982965c892a';
+        $href = 'https://www.facebook.com/v6.0/dialog/oauth?client_id=741726819700614&redirect_uri=http://localhost:8080/user/signin/callback.php?origin=facebook&state={st=state123abc,ds=123456789}';
         echo sprintf($output, $href);
         // instagram
         $output = '<p>
