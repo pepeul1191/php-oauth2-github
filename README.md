@@ -54,3 +54,4 @@ Fuentes:
 + https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow/v2.3
 + https://developers.facebook.com/apps/{appid}/settings/basic/
 + https://digitalleaves.com/social-login-for-your-rest-api-using-oauth-2-i/
++ https://stackoverflow.com/questions/41518926/how-can-i-get-facebook-user-information-by-access-token
