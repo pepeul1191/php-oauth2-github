@@ -1,8 +1,10 @@
 <?php
 
+include('../../configs/constants.php');
+
 $code = $_GET['code'];
 if($code == ''){
-  header('Location: http://localhost:8080/');
+  header('Location: ' . BASE_URL);
   exit();
 }
 $client_id = '1044701093820-jam7g5carn4nghkkhqr75ustq0l5vrum.apps.googleusercontent.com';
@@ -15,7 +17,7 @@ $params = array(
   'client_secret' => $client_secret,
   'code' => $code,
   'grant_type' => 'authorization_code',
-  'redirect_uri' => 'http://localhost:8080/user/signin/callback.php?origin=google', // debe de coincidir con el del sitio web de configuracion
+  'redirect_uri' => BASE_URL . 'user/signin/callback.php?origin=google', // debe de coincidir con el del sitio web de configuracion
 );
 curl_setopt($curl_token, CURLOPT_URL, $url);
 curl_setopt($curl_token, CURLOPT_POST, true);
@@ -39,8 +41,8 @@ if($data->access_token != ''){
   $_SESSION['user_img'] = $user_data->picture;
   $_SESSION['user_email'] = $user_data->email;
   $_SESSION['app'] = 'Google';
-  $_SESSION['logout_url'] = 'https://accounts.google.com/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost:8080/user/signin/exit.php';
-  header('Location: http://localhost:8080/');
+  $_SESSION['logout_url'] = 'https://accounts.google.com/Logout?continue=https://appengine.google.com/_ah/logout?continue=' . BASE_URL . 'user/signin/exit.php';
+  header('Location: ' . BASE_URL);
   exit();
 }
 

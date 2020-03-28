@@ -1,5 +1,7 @@
 <?php
 
+include('../../configs/constants.php');
+
 $code = $_GET['code'];
 if($code == ''){
   header('Location: http://localhost:8080/');
@@ -42,8 +44,8 @@ if($response['access_token'] != ''){
   $_SESSION['user_email'] = $user_data->email;
   $_SESSION['access_token'] = $data->access_token;
   $_SESSION['app'] = 'Github';
-  $_SESSION['logout_url'] = 'http://localhost:8080/user/signin/exit.php';
-  header('Location: http://localhost:8080/');
+  $_SESSION['logout_url'] = BASE_URL . 'user/signin/exit.php';
+  header('Location: ' . BASE_URL);
   exit();
 }
 

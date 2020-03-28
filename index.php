@@ -1,4 +1,5 @@
 <?php
+  include('./configs/constants.php');
   session_start();
 ?>
 <html>
@@ -35,13 +36,13 @@
         $output = '<p>
           <a href="%s" >Sign In with GMail</a>
         </p>';
-        $href = 'https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=1044701093820-jam7g5carn4nghkkhqr75ustq0l5vrum.apps.googleusercontent.com&redirect_uri=http://localhost:8080/user/signin/callback.php?origin=google&scope=profile email';
+        $href = 'https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=1044701093820-jam7g5carn4nghkkhqr75ustq0l5vrum.apps.googleusercontent.com&redirect_uri=' . BASE_URL . 'user/signin/callback.php?origin=google&scope=profile email';
         echo sprintf($output, $href);
         // facebook
         $output = '<p>
           <a href="%s" >Sign In with Facebook</a>
         </p>';
-        $href = 'https://www.facebook.com/v6.0/dialog/oauth?client_id=741726819700614&redirect_uri=http://localhost:8080/user/signin/callback.php?origin=facebook&state={st=state123abc,ds=123456789}';
+        $href = 'https://www.facebook.com/v6.0/dialog/oauth?client_id=741726819700614&redirect_uri=' . BASE_URL . 'user/signin/callback.php?origin=facebook&state={st=state123abc,ds=123456789}';
         echo sprintf($output, $href);
         // instagram
         $output = '<p>
